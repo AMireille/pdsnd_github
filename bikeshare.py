@@ -124,7 +124,7 @@ def time_stats(df):
     """
     Displays statistics on the most frequent times of travel.
     Args:
-    df: filtered dataframe
+        df: filtered dataframe
     """
 
     print('\nCalculating The Most Frequent Times of Travel:\n')
@@ -163,7 +163,7 @@ def station_stats(df):
     """
     Displays statistics on the most popular stations and trip.
     Args:
-    df- filtered dataframe
+        df- filtered dataframe
     """
     print('\nCalculating The Most Popular Stations and Trip\n')
     start_time = time.time()
@@ -196,7 +196,7 @@ def trip_duration_stats(df):
     """
     Displays statistics on the total and average trip duration.
     args:
-    df-filtered dataframe
+        df-filtered dataframe
     """
 
     print('\nCalculating Trip Duration:\n')
@@ -217,7 +217,7 @@ def user_stats(df):
     Displays statistics on bikeshare users.
     
     args:
-    df-filtered dataframe
+        df-filtered dataframe
     """
 
     print('\nCalculating User Statistics:\n')
