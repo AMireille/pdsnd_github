@@ -18,8 +18,6 @@ def filter_func(filt):
     If the new inputs are not available,it request for new entry.
     """
         
-    #inputs=0
-    #print("the input is:",filt)
     if (filt=='city'):
         inputs=(input("Which city would like to analyse? chicago,washington or new york city?: ")).lower()
         while(inputs not in (CITY_DATA.keys())):
@@ -83,7 +81,7 @@ def load_data(city, month, day):
     else:
         file=city +'.csv'
     df=pd.read_csv(file)
-    #print(df.info())
+
     df['Start Time']=pd.to_datetime(df['Start Time'])
     df['End Time']=pd.to_datetime(df['End Time'])
     df['days']= df['Start Time'].dt.day_name()
@@ -92,13 +90,11 @@ def load_data(city, month, day):
     
     if (month!='all' and day!='all'):
         df=df[(df['months']==month)& (df['days']==day)]
-        #df=df[df['days']==day]
+
     elif (month!='all' and day=='all'):
         df=df[(df['months']==month)]
     elif(month=='all' and day!='all'):
         df=df[(df['days']==day)]
-    #print("done")
-    #print(df.head())
         
     return df
 def display_data(df):
@@ -150,7 +146,7 @@ def time_stats(df):
     print("The most common day of the week is:",df['days'].mode()[0])
 
     # Display the most common start hour
-    #print("len of df is:",len(df['Start Time']))
+
     if(len(df['hour'].mode())==1):
         print("The most common start hour is",df['hour'].mode()[0])
     else:
@@ -180,7 +176,6 @@ def station_stats(df):
         for nber in range(len(df['Start Station'].mode())):
             print(df['Start Station'].mode()[nber],end=",")
         print()
-    #print("The most common station is",df['Start Station'].mode())
 
     # Display most commonly used end station
     if(len(df['End Station'].mode())==1):
