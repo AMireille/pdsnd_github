@@ -1,6 +1,6 @@
 """
-This script is used to analyse bikeshare statistical information 
-for three cities being Chicago,New york city and Washington.
+This script aim to analyse bikeshare statistical information 
+for three USA cities being Chicago,New york city and Washington.
 """
 import pandas as pd
 import numpy as np
